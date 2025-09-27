@@ -95,10 +95,12 @@ class TurtleCommander(Node):
             self.teleport(cx+r*math.cos(rad), cy+r*math.sin(rad))
 
     def draw_roof_step(self):
-        # ... (unchanged)
         self.set_pen(200,200,200,2,1); self.teleport(2.5,4.0); self.set_pen(200,200,200,2,0)
-        self.teleport(4.0,4.0); self.teleport(4.0,5.0); self.teleport(5.5,5.0)
-        self.teleport(6.0,4.0); self.teleport(2.5,4.0)
+        self.teleport(4.0,4.0); time.sleep(0.1) # Added sleep
+        self.teleport(4.0,5.0); time.sleep(0.1) # Added sleep
+        self.teleport(5.5,5.0); time.sleep(0.1) # Added sleep
+        self.teleport(6.0,4.0); time.sleep(0.3) # Added sleep
+        self.teleport(2.5,4.0); time.sleep(0.4) # Added sleep
 
     def draw_car(self):
         self.get_logger().info("Drawing car...")
